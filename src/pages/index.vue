@@ -1,19 +1,17 @@
 <template>
     <div>
-        <van-nav-bar
-        title="标题"
-        left-text="返回"
-        right-text="按钮"
-        left-arrow
-        @click-left="onClickLeft"
-        @click-right="onClickRight"
-        />
+        <header-nav></header-nav>
         <p v-text="msg"></p>
         <router-link to="home">linkto Home</router-link>
     </div>
 </template>
 <script>
+import headerNav from '@/components/headerNav'
+
 export default {
+    components: {
+        headerNav
+    },
     data () {
         return {
             msg: 'hello index'

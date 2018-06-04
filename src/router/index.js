@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Vant from 'vant'
 import 'vant/lib/vant-css/index.css'
+
 import index from '@/pages/index'
 import home from '@/pages/home'
 
