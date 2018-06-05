@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Vant from 'vant'
 import 'vant/lib/vant-css/index.css'
+import '@/assets/styles/styles.less'
 
 Vue.use(Router)
 Vue.use(Vant)
