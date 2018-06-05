@@ -1,9 +1,9 @@
 <template>
   <div class="header-nav">
      <van-nav-bar
-        title="标题"
-        left-text="返回"
-        right-text="按钮"
+        :title="navTitle"
+        :left-text="leftText"
+        :right-text="rightText"
         left-arrow
         @click-left="onClickLeft"
         @click-right="onClickRight"
@@ -16,22 +16,30 @@ export default {
   name: "headerNav",
   data() {
     return {
+      navTitle: "",
+      leftText: "",
+      rightText: "",
       msg: "Welcome to Your Vue.js App"
     };
   },
-    methods: {
-        onClickLeft() {
-            this.$toast({
-                type: 'loading',
-                message: 'hello world',
-                mask: true,
-                duration: 0
-            })
-        },
-        onClickRight() {
-            this.$toast('按钮');
-        }
+  props: {
+      'navTitle': {type: String, default: true},
+      'leftText': {type: String, default: true},
+      'rightText': {type: String, default: true}
+  },
+  methods: {
+    onClickLeft() {
+      this.$toast({
+        type: "loading",
+        message: "hello world",
+        mask: true,
+        duration: 0
+      });
+    },
+    onClickRight() {
+      this.$toast("按钮");
     }
+  }
 };
 </script>
 
